@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-	const sicon = message.guild.iconURL;
-	const serverembed = new RichEmbed()
+	let sicon = message.guild.iconURL;
+	let serverembed = new RichEmbed()
 	.setAuthor(message.guild.name)
 	.setThumbnail(sicon)
 	.addField("ID", message.guild.id, true)
