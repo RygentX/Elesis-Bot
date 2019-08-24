@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
     let target = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     let reason = args.slice(1).join(' ');
-    let reports = message.guild.channels.find('Nama', config.reportsChannel);
+    let reports = message.guild.channels.find('name', config.reportsChannel);
 
     if (!target) return message.reply('tolong sebutkan anggota untuk dilaporkan!');
     if (!reason) return message.reply('tolong jelaskan alasan untuk laporan ini!');
