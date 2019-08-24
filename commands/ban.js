@@ -11,19 +11,19 @@ module.exports.run = async (bot, message, args) => {
 
     if (!target) return message.reply('tolong sebutkan anggota yang akan diban!');
     if (!reason) return message.reply('tolong jelaskan alasannya!');
-    if (!logs) return message.reply(`tolong buat saluran bernama ${config.logsChannel} untuk mencatat larangan!`);
+    if (!logs) return message.reply(`tolong buat saluran bernama ${config.logsChannel} untuk mencatat!`);
     
     let embed = new discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(target.user.avatarURL)
-        .addField('Nama', `${target.user.username} with an ID: ${target.user.id}`)
-        .addField('Diban Oleh', `${message.author.username} with an ID: ${message.author.id}`)
+        .addField('Nama', `${target.user.username} dengan ID: ${target.user.id}`)
+        .addField('Diban Oleh', `${message.author.username} dengan ID: ${message.author.id}`)
         .addField('Diban Pada', message.createdAt)
-        .addField('Dilarang Di', message.channel)
-        .addField('Alasannya', reason)
+        .addField('Diban Di', message.channel)
+        .addField('Karena', reason)
         .setFooter('Informasi pengguna yang diban', target.user.displayAvatarURL);
 
-    message.channel.send(`${target.user.username} diblokir oleh ${message.author} karena ${reason}`);
+    message.channel.send(`${target.user.username} telah diban oleh ${message.author} karena ${reason}`);
     target.ban(reason);
     logs.send(embed);
 
