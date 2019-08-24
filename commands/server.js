@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 	let sicon = message.guild.iconURL;
-	let serverembed = new RichEmbed()
+	let serverembed = new Discord.RichEmbed()
 	.setAuthor(message.guild.name)
 	.setThumbnail(sicon)
 	.addField("ID", message.guild.id, true)
