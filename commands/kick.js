@@ -16,12 +16,12 @@ module.exports.run = async (bot, message, args) => {
     let embed = new discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(target.user.avatarURL)
-        .addField('Nama', `${target.user.username} with an ID: ${target.user.id}`)
-        .addField('Ditendang Oleh', `${message.author.username} with an ID: ${message.author.id}`)
+        .addField('Nama', `${target.user.username} dengan ID: ${target.user.id}`)
+        .addField('Ditendang Oleh', `${message.author.username} dengan ID: ${message.author.id}`)
         .addField('Ditendang Pada', message.createdAt)
         .addField('Ditendang Di', message.channel)
         .addField('Karena', reason)
-        .setFooter('Informasi pengguna tertendang', target.user.displayAvatarURL);
+        .setFooter('Informasi pengguna yang ditendang', target.user.displayAvatarURL);
 
     message.channel.send(`${target.user.username} telah ditendang oleh ${message.author} karena ${reason}`);
     target.kick(reason);
