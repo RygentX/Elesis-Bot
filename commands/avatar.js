@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-	let msg = await message.channel.send("Generating avatar...");
+	let msg = await message.channel.send("Memproses avatar...");
 	let target = message.mentions.users.first() || message.author;
 	
 	await message.channel.send({files: [
@@ -14,6 +14,6 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 	name: "avatar",
-	description: "Shows the profile picture of the user that is mentioned or yours.",
-	usage: "/avatar for yourself or /avatar [@USER] for others."
+	description: "Memperlihatkan foto profil pengguna.",
+	usage: "/avatar untuk foto diri sendiri atau /avatar [@USER] untuk melihat foto pengguna lain."
 }
