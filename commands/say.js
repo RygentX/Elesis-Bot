@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  if(!message.member.hasPermission(["MANAGE_MESSAGES"])) return message.channel.send("You can't use this command!")
+  if(!message.member.hasPermission(["MANAGE_MESSAGES"])) return message.channel.send("Kamu tidak bisa menggunakan perintah ini!")
   
   let argsresult;
   let mChannel = message.mentions.channels.first()
@@ -19,6 +19,6 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 	name: "say",
-	description: "Client says whatever you type after command in args.",
-	usage: "/say [Your text here]"
+	description: "Bot akan mengatakan apapun yang diketik.",
+	usage: "/say [tulis disini tanpa tanda kurung]"
 }
