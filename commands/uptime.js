@@ -4,7 +4,7 @@ const { RichEmbed } = require("discord.js");
 module.exports.run = (bot, message, args) => {
 
     const embed = new RichEmbed()
-    .setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL)
+    .setFooter(bot.readyAt)
     .setDescription(ms(bot.uptime))
     .setAuthor(bot.user.tag, bot.user.displayAvatarURL);
     message.channel.send(embed);
