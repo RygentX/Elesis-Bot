@@ -4,9 +4,9 @@ const { RichEmbed } = require("discord.js");
 module.exports.run = (bot, message, args) => {
 
     const embed = new RichEmbed()
-    .setFooter('Terakhir dimulai' bot.readyAt)
+    .setFooter(bot.readyAt)
     .setDescription(ms(bot.uptime))
-    .setAuthor('Uptime');
+    .setAuthor(bot.user.tag, bot.user.displayAvatarURL);
     message.channel.send(embed);
 }
 
