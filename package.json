@@ -1,6 +1,6 @@
 {
   "name": "eiza-bot",
-  "version": "1.0.0",
+  "version": "2.3.0",
   "description": "Management Discord Server",
   "main": "index.js",
   "scripts": {
