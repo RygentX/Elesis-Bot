@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
     let target = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     let reason = args.slice(1).join(' ');
-    let logs = message.guild.channels.find('Nama', config.logsChannel);
+    let logs = message.guild.channels.find('name', config.logsChannel);
 
     if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply('Anda tidak memiliki izin untuk menggunakan perintah ini!');
 
