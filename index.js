@@ -6,8 +6,8 @@ const bot = new discord.Client({disableEveryone: false});
 // When bot ready
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-    bot.user.setActivity("Building", {type: "PLAYING"}); //PLAYING, LISTENING, WATCHING
-    bot.user.setStatus('idle'); // dnd, idle, online, invisible	
+    bot.user.setActivity("v2.3.0 | /help", {type: "PLAYING"}); //PLAYING, LISTENING, WATCHING
+    bot.user.setStatus('online'); // dnd, idle, online, invisible	
 });
 
 // Load commands
