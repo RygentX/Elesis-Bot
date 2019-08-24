@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 	.addField("Tanggal dibuat", message.guild.createdAt, true)
 	.addField("Filter eksplisit", message.guild.explicitContentFilter, true)
 	.addField("Tingkat verifikasi", message.member.verificationLevel)
-	.addField("Pemilih", message.guild.owner.user.tag, true)
+	.addField("Pemilik", message.guild.owner.user.tag, true)
 	.addField("Anggota", message.guild.memberCount, true)
 	.addField("Role", message.guild.roles.size, true)
 	.addField("Saluran", message.guild.channels.filter(channel => channel.type !== 'category').size, true)
