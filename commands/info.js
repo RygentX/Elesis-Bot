@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 	let bicon = bot.user.displayAvatarURL;
 	let botembed = new Discord.RichEmbed()
+	.setColor("#FFE80D")
 	.setAuthor(bot.user.tag)
 	.setThumbnail(bicon)
 	.addField("ID", bot.user.id, true)
