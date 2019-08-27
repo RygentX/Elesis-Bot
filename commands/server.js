@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
 	let serverembed = new RichEmbed()
 	.setAuthor(message.guild.name)
 	.setThumbnail(sicon)
+	.setColor("#FFE80D")
 	.addField("ID", message.guild.id, true)
 	.addField("Server", message.guild.region.toUpperCase(), true)
 	.addField("Tanggal dibuat", message.guild.createdAt, true)
