@@ -3,7 +3,8 @@ const { RichEmbed } = require("discord.js");
 module.exports.run = (bot, message, args) => {
 
     const embed = new RichEmbed()
-    .setDescription(`Ping! ${bot.ping} ms...`)
+    .setColor("#FFE80D")
+    .setDescription(`Ping! ${bot.ping} ms`)
     .setAuthor(bot.user.tag, bot.user.displayAvatarURL);
     message.channel.send(embed);
 }
