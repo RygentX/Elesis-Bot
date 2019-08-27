@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
 	let userembed = new Discord.RichEmbed()
 	.setAuthor(message.author.tag)
 	.setThumbnail(uicon)
+	.setColor("#FFE80D")
 	.addField("ID", message.author.id, true)
 	.addField("Tanggal bergabung Discord", message.author.createdAt, true)
 	.addField("Tanggal bergabung Server", message.member.joinedAt, true)
